@@ -22,8 +22,8 @@ class AuthService {
                 await this.databases.createDocument(
                     conf.appwriteDatabaseId,
                     conf.appwriteCollectionId,
-                    ID.unique(), // Generate a unique ID for the document
-                    { name, email } // Ensure only valid attributes are included
+                    ID.unique(), 
+                    { name } 
                 );
                 return this.login({ email, password });
             } else {
